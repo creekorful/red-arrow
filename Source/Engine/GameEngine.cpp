@@ -26,12 +26,18 @@ void GameEngine::execute()
         m_pState->pollEvent(event);
     }
 
+    // clear window
+    m_window.clear();
+
     // then update physics for current state
     sf::Time dt = m_deltaClock.restart();
     m_pState->update(dt.asSeconds());
 
     // finally render state to screen
     m_window.draw(*m_pState);
+
+    // render everything to the screen
+    m_window.display();
 }
 
 void GameEngine::setCurrentState(GameState* pState)
