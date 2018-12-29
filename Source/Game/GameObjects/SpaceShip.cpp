@@ -8,6 +8,7 @@ SpaceShip::SpaceShip(const sf::Vector2f& position, const sf::Color& color)
     m_shape.setPoint(1, sf::Vector2f(- 6.f,  11.f));
     m_shape.setPoint(2, sf::Vector2f(  0.f,   0.f));
     m_shape.setPoint(3, sf::Vector2f(- 6.f, -11.f));
+    m_shape.setScale(2.f, 2.f);
 
     // set game object position
     setPosition(position);

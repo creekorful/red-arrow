@@ -21,9 +21,9 @@ void KeyboardController::pollEvent(const sf::Event& event)
     if (event.type == sf::Event::KeyPressed)
     {
         if (event.key.code == sf::Keyboard::Q)
-            m_rotation = -.50f;
+            m_rotation -= .70f;
         if (event.key.code == sf::Keyboard::D)
-            m_rotation = .50f;
+            m_rotation += .70f;
         if (event.key.code == sf::Keyboard::Z)
             m_velocity += .15f;
         if (event.key.code == sf::Keyboard::S)
