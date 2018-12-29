@@ -17,12 +17,13 @@ class GameState : public Updateable, public sf::Drawable
 public:
 
     /**
-     * Set associated game engine
-     * called by game engine when adding the game state
+     * Initialize the game state
+     * called by game engine when select the game state for the first time
+     * this will set internal pointer to game engine instance
      *
      * @param pGameEngine pointer to associated game engine
      */
-    void setGameEngine(GameEngine* pGameEngine);
+    void initialize(GameEngine* pGameEngine);
 
     /**
      * Update game state physics using given delta time
@@ -57,12 +58,20 @@ protected:
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override = 0;
 
     /**
+     * called internally when first intialization occured
+     * any initialization must be done here instead in the constructor to have
+     * access to associated game engine
+     */
+    virtual void initialize() = 0;
+
+    /**
      * @return the linked / associated game engine instance
      */
     GameEngine* getEngine();
 
 private:
     GameEngine* m_pGameEngine;
+    bool m_initialized;
 };
 
 

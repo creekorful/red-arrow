@@ -14,7 +14,6 @@
 class SinglePlayerState : public GameState
 {
 public:
-    SinglePlayerState();
 
     void update(float dt) override;
 
@@ -30,6 +29,8 @@ public:
 
 protected:
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
+
+    void initialize() override;
 
 private:
 

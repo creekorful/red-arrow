@@ -1,8 +1,15 @@
 #include "GameState.h"
 
-void GameState::setGameEngine(GameEngine* pGameEngine)
+void GameState::initialize(GameEngine* pGameEngine)
 {
-    m_pGameEngine = pGameEngine;
+    if (!m_initialized)
+    {
+        m_initialized = true;
+        m_pGameEngine = pGameEngine;
+
+        // call internal initialization method
+        initialize();
+    }
 }
 
 GameEngine* GameState::getEngine()

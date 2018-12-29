@@ -57,7 +57,7 @@ void GameEngine::execute()
 void GameEngine::setCurrentState(GameState* pState)
 {
     m_pState = pState;
-    m_pState->setGameEngine(this);
+    m_pState->initialize(this);
 
     // override window title if any
     if (pState->title().empty())
