@@ -45,7 +45,7 @@ void GameEngine::execute()
 
     // then update physics for current state
     sf::Time dt = m_deltaClock.restart();
-    m_pState->update(dt.asSeconds());
+    m_pState->update(dt.asMilliseconds());
 
     // finally render state to screen
     m_window.draw(*m_pState);

@@ -17,7 +17,7 @@ public:
      *
      * @param title the window title
      */
-    GameEngine(const std::string& title);
+    explicit GameEngine(const std::string& title);
 
     /**
      * Instantiate the game engine

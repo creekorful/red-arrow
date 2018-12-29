@@ -1,6 +1,7 @@
 #ifndef RED_ARROW_KEBOARDCONTROLLER_H
 #define RED_ARROW_KEBOARDCONTROLLER_H
 
+#include <cmath>
 
 #include "../../Engine/GameObject/Component.h"
 
@@ -17,7 +18,8 @@ public:
     void pollEvent(const sf::Event& event) override;
 
 private:
-    sf::Vector2f m_velocity;
+    float m_velocity;
+    float m_rotation;
 };
 
 
