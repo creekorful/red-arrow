@@ -20,7 +20,7 @@ void GameEngine::execute()
         // manage window quit event
         if (event.type == sf::Event::Closed)
         {
-            m_window.close();
+            quit();
         }
 
         m_pState->pollEvent(event);
@@ -43,10 +43,16 @@ void GameEngine::execute()
 void GameEngine::setCurrentState(GameState* pState)
 {
     m_pState = pState;
+    m_pState->setGameEngine(this);
 
     // override window title if any
     if (pState->title().empty())
     {
         m_window.setTitle(pState->title());
     }
+}
+
+void GameEngine::quit()
+{
+    m_window.close();
 }

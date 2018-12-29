@@ -15,8 +15,8 @@ void KeyboardController::pollEvent(const sf::Event& event)
     if (event.type == sf::Event::KeyPressed)
     {
         if (event.key.code == sf::Keyboard::D)
-            m_velocity.x += 1.f;
+            m_velocity.x += 5.f;
         else if (event.key.code == sf::Keyboard::Q)
-            m_velocity.x -= 1.f;
+            m_velocity.x -= 5.f;
     }
 }

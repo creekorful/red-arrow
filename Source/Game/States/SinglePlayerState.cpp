@@ -12,6 +12,11 @@ void SinglePlayerState::update(const float dt)
 
 void SinglePlayerState::pollEvent(const sf::Event& event)
 {
+    // handle exit event
+    if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
+        getEngine()->quit();
+
+    // then dispatch events to game object
     m_ship.pollEvent(event);
 }
 

@@ -6,6 +6,8 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include "State/GameState.h"
 
+class GameState;
+
 class GameEngine
 {
 public:
@@ -27,6 +29,11 @@ public:
      * make sure that there is an active state before calling execute otherwise app will crash
      */
     void execute();
+
+    /**
+     * Trigger game stop gracefully
+     */
+    void quit();
 
     /**
      * Set the current / active state

@@ -5,6 +5,9 @@
 #include <SFML/Window/Event.hpp>
 
 #include "../Common/Updateable.h"
+#include "../GameEngine.h"
+
+class GameEngine;
 
 /**
  * A game state can be pause menu main menu single player mode etc...
@@ -12,6 +15,15 @@
 class GameState : public Updateable, public sf::Drawable
 {
 public:
+
+    /**
+     * Set associated game engine
+     * called by game engine when adding the game state
+     *
+     * @param pGameEngine pointer to associated game engine
+     */
+    void setGameEngine(GameEngine* pGameEngine);
+
     /**
      * Update game state physics using given delta time
      * useful if physics should be computed
@@ -43,6 +55,14 @@ protected:
      * @param states rend states to be used
      */
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override = 0;
+
+    /**
+     * @return the linked / associated game engine instance
+     */
+    GameEngine* getEngine();
+
+private:
+    GameEngine* m_pGameEngine;
 };
 
 
