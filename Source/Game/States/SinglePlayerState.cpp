@@ -12,7 +12,7 @@ void SinglePlayerState::update(const float dt)
 
 void SinglePlayerState::pollEvent(const sf::Event& event)
 {
-
+    m_ship.pollEvent(event);
 }
 
 std::string SinglePlayerState::title()

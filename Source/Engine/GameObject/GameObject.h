@@ -27,6 +27,8 @@ public:
      */
     void update(float dt) override;
 
+    void pollEvent(const sf::Event& event);
+
 protected:
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override = 0;
 

@@ -2,16 +2,24 @@
 
 void GameObject::update(float dt)
 {
-    for (auto component : m_pComponents)
+    for (auto pComponent : m_pComponents)
     {
-        component->update(dt);
+        pComponent->update(dt);
+    }
+}
+
+void GameObject::pollEvent(const sf::Event& event)
+{
+    for (auto pComponent : m_pComponents)
+    {
+        pComponent->pollEvent(event);
     }
 }
 
 GameObject::~GameObject()
 {
-    for (auto component : m_pComponents)
+    for (auto pComponent : m_pComponents)
     {
-        delete component;
+        delete pComponent;
     }
 }

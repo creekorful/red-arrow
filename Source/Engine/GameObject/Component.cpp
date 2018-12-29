@@ -8,7 +8,7 @@ Component::Component(GameObject* pParent)
 Component::~Component()
 = default;
 
-void Component::update(const float dt)
+GameObject* Component::getParent()
 {
-
+    return m_pParent;
 }
