@@ -25,6 +25,14 @@ public:
      */
     virtual void pollEvent(const sf::Event& event) = 0;
 
+    /**
+     * return the name of the state to be displayed on window title
+     * if empty the window name will not be changed
+     *
+     * @return state window name or empty string
+     */
+    virtual std::string title() = 0;
+
 protected:
     /**
      * Draw the state to the render target
