@@ -1,8 +1,17 @@
 #include "GameEngine.h"
 
-GameEngine::GameEngine(const sf::VideoMode& videoMode, const std::string& title) : m_window(videoMode, title)
+GameEngine::GameEngine(const sf::VideoMode& videoMode, const std::string& title) :
+        GameEngine(videoMode, title, sf::Style::Default)
 {
+}
+
+GameEngine::GameEngine(const sf::VideoMode& videoMode, const std::string& title, unsigned int style)
+{
+    // create window and setup
+    m_window.create(videoMode, title, style);
     m_window.setFramerateLimit(60);
+
+    // initialize members
     m_pState = nullptr;
 }
 

@@ -4,6 +4,7 @@
 #include <SFML/Window/VideoMode.hpp>
 #include <SFML/Window/Event.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
+
 #include "State/GameState.h"
 
 class GameState;
@@ -18,6 +19,15 @@ public:
      * @param title the window title
      */
     GameEngine(const sf::VideoMode& videoMode, const std::string& title);
+
+    /**
+     * Instantiate the game engine
+     *
+     * @param videoMode the window video mode
+     * @param title the window title
+     * @param style the window style
+     */
+    GameEngine(const sf::VideoMode& videoMode, const std::string& title, unsigned int style);
 
     /**
      * @return true if the game engine is running
