@@ -1,12 +1,17 @@
 #include "SinglePlayerState.h"
 
-SinglePlayerState::SinglePlayerState() : m_playerShip(sf::Vector2f(50, 50))
+SinglePlayerState::SinglePlayerState()
 {
+    // create player space ship
+    m_pGameObjects.push_back(new PlayerSpaceShip(sf::Vector2f(50, 50)));
 }
 
 void SinglePlayerState::update(const float dt)
 {
-    m_playerShip.update(dt);
+    for (auto pGameObject : m_pGameObjects)
+    {
+        pGameObject->update(dt);
+    }
 }
 
 void SinglePlayerState::pollEvent(const sf::Event& event)
@@ -15,8 +20,11 @@ void SinglePlayerState::pollEvent(const sf::Event& event)
     if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
         getEngine()->quit();
 
-    // then dispatch events to game object
-    m_playerShip.pollEvent(event);
+    // then dispatch events to game objects
+    for (auto pGameObject : m_pGameObjects)
+    {
+        pGameObject->pollEvent(event);
+    }
 }
 
 std::string SinglePlayerState::title()
@@ -26,5 +34,8 @@ std::string SinglePlayerState::title()
 
 void SinglePlayerState::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
-    target.draw(m_playerShip, states);
+    for (auto pGameObject : m_pGameObjects)
+    {
+        target.draw(*pGameObject, states);
+    }
 }

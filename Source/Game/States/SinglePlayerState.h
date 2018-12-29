@@ -2,6 +2,8 @@
 #define RED_ARROW_SINGLEPLAYERSTATE_H
 
 
+#include <vector>
+
 #include "../../Engine/State/GameState.h"
 #include "../GameObjects/PlayerSpaceShip.h"
 
@@ -29,7 +31,8 @@ protected:
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 
 private:
-    PlayerSpaceShip m_playerShip;
+
+    std::vector<GameObject*> m_pGameObjects;
 };
 
 
