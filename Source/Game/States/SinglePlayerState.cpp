@@ -1,6 +1,6 @@
 #include "SinglePlayerState.h"
 
-void SinglePlayerState::update(float dt)
+void SinglePlayerState::update(const float dt)
 {
 
 }
@@ -17,5 +17,5 @@ std::string SinglePlayerState::title()
 
 void SinglePlayerState::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
-    
+
 }

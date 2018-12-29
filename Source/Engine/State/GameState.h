@@ -4,10 +4,12 @@
 #include <SFML/Graphics/Drawable.hpp>
 #include <SFML/Window/Event.hpp>
 
+#include "../Common/Updateable.h"
+
 /**
  * A game state can be pause menu main menu single player mode etc...
  */
-class GameState : public sf::Drawable
+class GameState : public Updateable, public sf::Drawable
 {
 public:
     /**
@@ -16,7 +18,7 @@ public:
      *
      * @param dt the time passed
      */
-    virtual void update(float dt) = 0;
+    void update(float dt) override = 0;
 
     /**
      * Poll event received from window

@@ -4,6 +4,9 @@
 
 #include "../../Engine/State/GameState.h"
 
+/**
+ * State that represent single player mode
+ */
 class SinglePlayerState : public GameState
 {
 public:
