@@ -1,13 +1,12 @@
 #include "SinglePlayerState.h"
 
-SinglePlayerState::SinglePlayerState() : m_ship(sf::Vector2f(50, 50), sf::Color::Red)
+SinglePlayerState::SinglePlayerState() : m_playerShip(sf::Vector2f(50, 50))
 {
-    m_ship.add(new KeyboardController(&m_ship));
 }
 
 void SinglePlayerState::update(const float dt)
 {
-    m_ship.update(dt);
+    m_playerShip.update(dt);
 }
 
 void SinglePlayerState::pollEvent(const sf::Event& event)
@@ -17,7 +16,7 @@ void SinglePlayerState::pollEvent(const sf::Event& event)
         getEngine()->quit();
 
     // then dispatch events to game object
-    m_ship.pollEvent(event);
+    m_playerShip.pollEvent(event);
 }
 
 std::string SinglePlayerState::title()
@@ -27,5 +26,5 @@ std::string SinglePlayerState::title()
 
 void SinglePlayerState::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
-    target.draw(m_ship, states);
+    target.draw(m_playerShip, states);
 }

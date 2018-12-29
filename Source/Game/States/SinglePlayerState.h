@@ -3,8 +3,7 @@
 
 
 #include "../../Engine/State/GameState.h"
-#include "../GameObjects/SpaceShip.h"
-#include "../Components/KeyboardController.h"
+#include "../GameObjects/PlayerSpaceShip.h"
 
 /**
  * State that represent single player mode
@@ -30,7 +29,7 @@ protected:
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 
 private:
-    SpaceShip m_ship;
+    PlayerSpaceShip m_playerShip;
 };
 
 
