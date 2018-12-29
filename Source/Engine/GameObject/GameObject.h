@@ -32,7 +32,7 @@ public:
     /**
      * Add component to the game object
      *
-     * @param pComponent the component to be added
+     * @param pComponent pointer to the component to add
      */
     void add(Component* pComponent);
 

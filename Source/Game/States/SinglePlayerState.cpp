@@ -7,7 +7,7 @@ SinglePlayerState::SinglePlayerState() : m_ship(sf::Vector2f(50, 50), sf::Color:
 
 void SinglePlayerState::update(const float dt)
 {
-    m_ship.move(sf::Vector2f(15, 15) * dt);
+    m_ship.update(dt);
 }
 
 void SinglePlayerState::pollEvent(const sf::Event& event)

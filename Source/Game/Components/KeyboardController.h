@@ -4,14 +4,20 @@
 
 #include "../../Engine/GameObject/Component.h"
 
+/**
+ * represent a human keyboard controller / input
+ */
 class KeyboardController : public Component
 {
 public:
-    KeyboardController(GameObject* pParent);
+    explicit KeyboardController(GameObject* pParent);
 
     void update(float dt) override;
 
     void pollEvent(const sf::Event& event) override;
+
+private:
+    sf::Vector2f m_velocity;
 };
 
 
