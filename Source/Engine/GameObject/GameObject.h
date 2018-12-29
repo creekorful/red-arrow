@@ -29,6 +29,13 @@ public:
 
     void pollEvent(const sf::Event& event);
 
+    /**
+     * Add component to the game object
+     *
+     * @param pComponent the component to be added
+     */
+    void add(Component* pComponent);
+
 protected:
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override = 0;
 

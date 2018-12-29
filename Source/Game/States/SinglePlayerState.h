@@ -4,6 +4,7 @@
 
 #include "../../Engine/State/GameState.h"
 #include "../GameObjects/SpaceShip.h"
+#include "../Components/KeyboardController.h"
 
 /**
  * State that represent single player mode

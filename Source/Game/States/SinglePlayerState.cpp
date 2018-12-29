@@ -2,7 +2,7 @@
 
 SinglePlayerState::SinglePlayerState() : m_ship(sf::Vector2f(50, 50), sf::Color::Red)
 {
-
+    m_ship.add(new KeyboardController(&m_ship));
 }
 
 void SinglePlayerState::update(const float dt)

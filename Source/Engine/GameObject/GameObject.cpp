@@ -23,3 +23,8 @@ GameObject::~GameObject()
         delete pComponent;
     }
 }
+
+void GameObject::add(Component* pComponent)
+{
+    m_pComponents.push_back(pComponent);
+}
