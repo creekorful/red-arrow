@@ -13,6 +13,13 @@ class GameEngine
 {
 public:
     /**
+     * Instantiate the game engine in full screen mode
+     *
+     * @param title the window title
+     */
+    GameEngine(const std::string& title);
+
+    /**
      * Instantiate the game engine
      *
      * @param videoMode the window video mode

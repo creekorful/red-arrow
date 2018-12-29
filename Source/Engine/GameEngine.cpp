@@ -1,5 +1,10 @@
 #include "GameEngine.h"
 
+GameEngine::GameEngine(const std::string& title)
+        : GameEngine(sf::VideoMode::getFullscreenModes()[0], title, sf::Style::Fullscreen)
+{
+}
+
 GameEngine::GameEngine(const sf::VideoMode& videoMode, const std::string& title) :
         GameEngine(videoMode, title, sf::Style::Default)
 {
