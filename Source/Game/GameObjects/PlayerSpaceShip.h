@@ -10,7 +10,6 @@ class PlayerSpaceShip : public SpaceShip
 {
 public:
     explicit PlayerSpaceShip(const sf::Vector2f& position);
-
 };
 
 

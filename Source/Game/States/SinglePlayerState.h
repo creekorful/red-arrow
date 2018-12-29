@@ -6,6 +6,7 @@
 
 #include "../../Engine/State/GameState.h"
 #include "../GameObjects/PlayerSpaceShip.h"
+#include "../GameObjects/EnemySpaceShip.h"
 
 /**
  * State that represent single player mode

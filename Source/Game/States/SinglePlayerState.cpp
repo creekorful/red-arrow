@@ -4,6 +4,10 @@ SinglePlayerState::SinglePlayerState()
 {
     // create player space ship
     m_pGameObjects.push_back(new PlayerSpaceShip(sf::Vector2f(50, 50)));
+
+    // spawn 10 ennemies
+    /*for (int iEnemy = 0; iEnemy < 10; iEnemy++)
+        m_pGameObjects.push_back(new EnemySpaceShip());*/
 }
 
 void SinglePlayerState::update(const float dt)
