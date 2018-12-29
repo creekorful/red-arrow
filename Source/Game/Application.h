@@ -3,6 +3,8 @@
 
 #include "../Engine/GameEngine.h"
 
+#include "States/SinglePlayerState.h"
+
 /**
  * Represent the game
  */

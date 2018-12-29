@@ -32,5 +32,9 @@ void GameEngine::execute()
 void GameEngine::setCurrentState(GameState* pState)
 {
     m_pState = pState;
-    m_window.setTitle(pState->title());
+
+    if (pState->title().empty())
+    {
+        m_window.setTitle(pState->title());
+    }
 }
