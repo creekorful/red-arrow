@@ -24,6 +24,7 @@ public:
 
     /**
      * execute the game engine main loop
+     * make sure that there is an active state before calling execute otherwise app will crash
      */
     void execute();
 

@@ -15,12 +15,10 @@ void GameEngine::execute()
 {
     // first of all poll events
     sf::Event event{};
-
     while (m_window.pollEvent(event))
     {
-        // manage window quit event globally
-        if (event.type == sf::Event::Closed ||
-            (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape))
+        // manage window quit event
+        if (event.type == sf::Event::Closed)
         {
             m_window.close();
         }
