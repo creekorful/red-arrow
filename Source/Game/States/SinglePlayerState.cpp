@@ -1,12 +1,11 @@
 #include "SinglePlayerState.h"
-#include "../../Engine/Utils/RandomNumberGenerator.h"
 
 void SinglePlayerState::initialize()
 {
     // create player space ship
     m_pGameObjects.push_back(new PlayerSpaceShip(sf::Vector2f(50, 50)));
 
-    RandomNumberGenerator rng;
+    //ma::RandomNumberGenerator rng;
 
     // spawn 10 ennemies
     /*for (int iEnemy = 0; iEnemy < 10; iEnemy++)

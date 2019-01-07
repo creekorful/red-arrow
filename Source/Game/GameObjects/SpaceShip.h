@@ -4,9 +4,9 @@
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/ConvexShape.hpp>
 
-#include "../../Engine/GameObject/GameObject.h"
+#include "../../Majoris/Source/Engine/GameObject/GameObject.h"
 
-class SpaceShip : public GameObject
+class SpaceShip : public ma::GameObject
 {
 public:
     explicit SpaceShip(const sf::Vector2f& position, const sf::Color& color);

@@ -4,14 +4,16 @@
 
 #include <vector>
 
-#include "../../Engine/State/GameState.h"
+#include "../../Majoris/Source/Engine/State/GameState.h"
+#include "../../Majoris/Source/Engine/GameObject/GameObject.h"
+
 #include "../GameObjects/PlayerSpaceShip.h"
 #include "../GameObjects/EnemySpaceShip.h"
 
 /**
  * State that represent single player mode
  */
-class SinglePlayerState : public GameState
+class SinglePlayerState : public ma::GameState
 {
 public:
 
@@ -34,7 +36,7 @@ protected:
 
 private:
 
-    std::vector<GameObject*> m_pGameObjects;
+    std::vector<ma::GameObject*> m_pGameObjects;
 };
 
 

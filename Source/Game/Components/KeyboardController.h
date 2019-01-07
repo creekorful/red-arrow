@@ -3,15 +3,15 @@
 
 #include <cmath>
 
-#include "../../Engine/GameObject/Component.h"
+#include "../../Majoris/Source/Engine/GameObject/Component.h"
 
 /**
  * represent a human keyboard controller / input
  */
-class KeyboardController : public Component
+class KeyboardController : public ma::Component
 {
 public:
-    explicit KeyboardController(GameObject* pParent);
+    explicit KeyboardController(ma::GameObject* pParent);
 
     void update(float dt) override;
 

@@ -1,6 +1,6 @@
 #include "KeyboardController.h"
 
-KeyboardController::KeyboardController(GameObject* pParent) : Component(pParent)
+KeyboardController::KeyboardController(ma::GameObject* pParent) : Component(pParent)
 {
     m_velocity = 0.f;
 }

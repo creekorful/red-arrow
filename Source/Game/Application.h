@@ -1,9 +1,8 @@
 #ifndef RED_ARROW_APPLICATION_H
 #define RED_ARROW_APPLICATION_H
 
-#include "../Engine/GameEngine.h"
-
 #include "States/SinglePlayerState.h"
+#include "../Majoris/Source/Engine/GameEngine.h"
 
 /**
  * Represent the game
@@ -16,7 +15,7 @@ public:
     int execute();
 
 private:
-    GameEngine m_gameEngine;
+    ma::GameEngine m_gameEngine;
 };
 
 
